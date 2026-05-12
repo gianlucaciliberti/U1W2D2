@@ -162,8 +162,11 @@ const prodotti = [
     'Quaderno',
     'Zaino',
 ]
-console.log(`Zaino è in carrello? ${prodotti.includes('Zaino')}`);
-console.log(`La posizione è ${prodotti.indexOf('Zaino')}`);
+let cercato = 'Zaino';
+if (prodotti.includes(cercato)) {
+    console.log(`${cercato} è in carrello? ${prodotti.includes(cercato)}`);
+    console.log(`La posizione è ${prodotti.indexOf(cercato)}`);
+} else { 'Non in carrello' }
 
 /* ESERCIZIO 11 — Lista utenti
    Array utenti di 3 oggetti { nome, eta }.
@@ -172,8 +175,23 @@ console.log(`La posizione è ${prodotti.indexOf('Zaino')}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const utenti = [
+    {
+        nome: 'Mario',
+        eta: 23,
+    }, {
+        nome: 'Anna',
+        eta: 25,
+    }, {
+        nome: 'Luca',
+        eta: 30,
+    }
+]
 
-
+for (let i=0; i<utenti.length; i++) {
+    console.log(`${utenti[i].nome} (${utenti[i].eta} anni)`)
+}
+console.table(utenti)
 /* ESERCIZIO 12 — Inventario disponibili
    Array prodotti di 4 oggetti { nome, prezzo, disponibile }.
    Con for, per ogni prodotto:
@@ -204,13 +222,13 @@ const carrello = [
         price: 12,
         disponibile: true,
     }
-];
+]
 
 for (let i = 0; i < carrello.length; i++) {
-    if (carrello[i].disponibile === true && carrello[i].price < 10) {
-        console.log(`OFFERTA: ${carrello[i].nome} (${carrello[i].price})`);
-    } else if (carrello[i].disponibile === true && carrello[i].price >= 10) {
-        console.log(`${carrello[i].nome} - (${carrello[i].price})`);
+    if (carrello[i].disponibile && carrello[i].price < 10) {
+        console.log(`OFFERTA: ${carrello[i].nome} (${carrello[i].price}€)`);
+    } else if (carrello[i].disponibile && carrello[i].price >= 10) {
+        console.log(`${carrello[i].nome} - (${carrello[i].price}€)`);
     } else {
         console.log(` ${carrello[i].nome}: Esaurito`);
     }
@@ -224,18 +242,12 @@ for (let i = 0; i < carrello.length; i++) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const ordinated = [
-    1,
-    2,
-    3,
-    4,
-    5,
-];
+const ordinated = [1,2,3,4,5,];
 
-const inverso = [];
-for (let i = 0; i < ordinated.length; i++) {
-    inverso.push(ordinated.length);
+const inverso = [ ];
+
+for (let  i = ordinated.length; i>=1 ;  i++) {
+    inverso.push(ordinated[i-1]);
 }
-console.log(inverso)
-
+console.log(inverso);
 
