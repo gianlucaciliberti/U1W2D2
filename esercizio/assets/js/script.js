@@ -207,9 +207,9 @@ const carrello = [
 ];
 
 for (let i = 0; i < carrello.length; i++) {
-    if (carrello[i].disponibile===true && carrello[i].price < 10) {
+    if (carrello[i].disponibile === true && carrello[i].price < 10) {
         console.log(`OFFERTA: ${carrello[i].nome} (${carrello[i].price})`);
-    } else if (carrello[i].disponibile===true && carrello[i].price>=10) {
+    } else if (carrello[i].disponibile === true && carrello[i].price >= 10) {
         console.log(`${carrello[i].nome} - (${carrello[i].price})`);
     } else {
         console.log(` ${carrello[i].nome}: Esaurito`);
@@ -231,4 +231,11 @@ const ordinated = [
     4,
     5,
 ];
+
+const inverso = [];
+for (let i = 0; i < ordinated.length; i++) {
+    inverso.push(ordinated.length);
+}
+console.log(inverso)
+
 
