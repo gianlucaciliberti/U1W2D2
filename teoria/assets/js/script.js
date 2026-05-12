@@ -211,7 +211,7 @@ console.log(active);
 //Operatori logici
 let personAge=19;
 let personCan = true; 
-if (personAge<18 || !personCan) {
+if (personAge<18 || !personCan) { // not (!) inverte valore boolean della variabile
     console.log('Non può guidare');
 } else {
     console.log ('Può guidare');
